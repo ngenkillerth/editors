@@ -96,5 +96,43 @@
     <h1>กำลังเปลี่ยนเส้นทางไปยัง Portfolio</h1>
     <div class="loading-dots">...</div>
   </div>
+<script>
+  // ป้องกันกด F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+      alert('ฟีเจอร์นี้ถูกปิดใช้งาน');
+    }
+
+    // Ctrl+Shift+I (เปิด Inspect Element)
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+      e.preventDefault();
+      alert('ฟีเจอร์นี้ถูกปิดใช้งาน');
+    }
+
+    // Ctrl+Shift+J (เปิด Console)
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+      e.preventDefault();
+      alert('ฟีเจอร์นี้ถูกปิดใช้งาน');
+    }
+
+    // Ctrl+U (ดูซอร์สโค้ด)
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+      e.preventDefault();
+      alert('ฟีเจอร์นี้ถูกปิดใช้งาน');
+    }
+  });
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('คลิกขวาถูกปิดใช้งาน');
+  });
+
+  // ป้องกันคลิกขวา (Context Menu)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('คลิกขวาถูกปิดใช้งาน');
+  });
+</script>
 </body>
 </html>
