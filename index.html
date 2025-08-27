@@ -10,12 +10,67 @@
   <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczPfVjZXE0ojfgbIQXfG4DZCg-mmEC6fOUk6luV9PtT-MO0Mweq56oMqQDC43bLpJyh1Cx0refuUH5fgcPCjtyc8bd2Xuid5TSLZWT_RaW0aUQ5dymv5MtzG_OC3ntv8Qd7GpGPLy53axD5L7OiNH8I=w1536-h1024-s-no-gm" />
   <meta property="og:url" content="https://ngenkillerth.github.io/editors" />
 
-  <!-- ✅ เปลี่ยนลิงก์นี้เป็นลิงก์ Google Apps Script Web App ของคุณ -->
-  <meta http-equiv="refresh" content="2; url=https://script.google.com/macros/s/AKfycbxBBJntYBEtkew4hAvkje1UYENdwdHgI0-9roeMPwNC2zq5KV4CMrs-GQYZrtQp1tWARQ/exec" />
+  <!-- ✅ ลิงก์ Apps Script Web App -->
+  <meta http-equiv="refresh" content="3; url=https://script.google.com/macros/s/AKfycbxBBJntYBEtkew4hAvkje1UYENdwdHgI0-9roeMPwNC2zq5KV4CMrs-GQYZrtQp1tWARQ/exec" />
 
   <title>กำลังเปลี่ยนเส้นทาง...</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #3e3e55);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .message-container {
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .message-container h1 {
+      font-size: 2.2em;
+      margin: 0;
+      letter-spacing: 1px;
+      animation: typewriter 2s steps(40, end);
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #fff;
+      display: inline-block;
+    }
+
+    .loading-dots {
+      margin-top: 10px;
+      font-size: 1.5em;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
 </head>
 <body>
-  <p>กำลังเปลี่ยนเส้นทางไปยัง Portfolio</p>
+  <div class="message-container">
+    <h1>กำลังเปลี่ยนเส้นทางไปยัง Portfolio</h1>
+    <div class="loading-dots">...</div>
+  </div>
 </body>
 </html>
